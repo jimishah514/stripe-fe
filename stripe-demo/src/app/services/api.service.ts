@@ -7,11 +7,10 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  //apiDomain = 'https://serene-citadel-01484.herokuapp.com';
-  apiDomain = 'http://localhost:8080';
+  apiDomain = 'https://serene-citadel-01484.herokuapp.com/';
+  //apiDomain = 'http://localhost:8080';
 
   helloWorld() {
-    debugger
     try {
       return this.http.get(`${this.apiDomain}/`).toPromise();
     } catch {
@@ -19,17 +18,15 @@ export class ApiService {
     }
   }
 
-  postCoupons(percent_off, duration, duration_in_months) {
-    debugger
+  postCoupons(percent_off, duration, duration_in_months ) {
     try {
-      return this.http.post(`${this.apiDomain}/coupons`, {percent_off,duration,duration_in_months}).toPromise();
+      return this.http.post(`${this.apiDomain}/coupons`, {percent_off, duration, duration_in_months}).toPromise();
     } catch {
       throw Error;
     }
   }
 
   getCoupons() {
-    debugger
     try {
       return this.http.get(`${this.apiDomain}/coupons`).toPromise();
     } catch {

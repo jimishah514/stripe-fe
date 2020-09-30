@@ -1,0 +1,12 @@
+.item {
+  background-color: aquamarine;
+  border: black;
+  border-style: solid;
+  padding: 2%;
+}
+
+.button {
+  color: red;
+  margin-left: 90%;
+  margin-bottom: 1%;
+}

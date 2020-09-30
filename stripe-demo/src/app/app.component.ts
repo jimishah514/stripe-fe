@@ -9,8 +9,6 @@ import { ApiService } from './services/api.service';
 export class AppComponent {
   coupons ;
  constructor(private api: ApiService) {
-   debugger
    this.api.helloWorld();
-   //this.api.postCoupons();
  }
 }

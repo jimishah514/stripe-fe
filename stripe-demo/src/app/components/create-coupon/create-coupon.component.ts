@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
+import { StateService } from 'src/app/services/state.service';
 
 @Component({
   selector: 'app-create-coupon',
@@ -15,7 +16,8 @@ export class CreateCouponComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private api: ApiService
+    private api: ApiService,
+    private state: StateService
   ) {
     this.formGroup = this.formBuilder.group({
       percentageOff: '',
@@ -25,13 +27,14 @@ export class CreateCouponComponent implements OnInit {
   }
 
   onSubmit() {
-    debugger
     const per = this.formGroup.value.percentageOff;
     const dur = this.formGroup.value.duration;
     const months = this.formGroup.value.duration_in_months;
     this.api.postCoupons(
       per, dur, months
-      );
+      ).then(res => {
+        this.state.getCoupons();
+      });
   }
 
 

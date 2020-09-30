@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiDomain = 'https://polar-shelf-99697.herokuapp.com/';
+  apiDomain = 'https://polar-shelf-99697.herokuapp.com';
   //apiDomain = 'http://localhost:8080';
 
   helloWorld() {

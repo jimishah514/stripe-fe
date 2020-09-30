@@ -1,0 +1,17 @@
+<h1>Coupons List From Stripe</h1>
+<ul>
+  <li *ngFor="let coupon of coupons">
+    Coupon Id: {{coupon.id}}
+    <br>
+    Created: {{coupon.created}}
+    <br>
+    Duration: {{coupon.duration}}
+    <br>
+    Duration in months: {{coupon.duration_in_months}}
+    <br>
+    Percent Off: {{coupon.percent_off}}
+    <br>
+    Valid: {{coupon.valid}}
+  </li>
+
+</ul>

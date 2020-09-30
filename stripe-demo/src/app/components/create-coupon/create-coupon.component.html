@@ -1,0 +1,29 @@
+<h1>Create Coupon Form</h1>
+<div class="container">
+
+  <form [formGroup]="formGroup">
+    <div class="form-group">
+      <label for="percentageOff">Percentage Off</label>
+      <input type="number" class="form-control" id="percentageOff"
+        placeholder="Percentage Off" formControlName="percentageOff" />
+    </div>
+
+    <div class="form-group">
+      <label for="duration">Duration</label>
+      <select formControlName="duration">
+        <option>once</option>
+        <option>repeating</option>
+        <option>forever</option>
+      </select>
+
+    </div>
+
+    <div class="form-group">
+      <label for="duration_in_months">Duration in Months</label>
+      <input type="number" class="form-control" id="duration_in_months"
+        placeholder="Duration in Months" formControlName="duration_in_months" />
+    </div>
+
+    <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  </form>
+</div>

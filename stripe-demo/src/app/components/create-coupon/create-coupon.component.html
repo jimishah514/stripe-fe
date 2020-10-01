@@ -3,6 +3,12 @@
 
   <form [formGroup]="formGroup">
     <div class="form-group">
+      <label for="name">Name</label>
+      <input type="string" class="form-control" id="name"
+        placeholder="Name" formControlName="name" />
+    </div>
+
+    <div class="form-group">
       <label for="percentageOff">Percentage Off</label>
       <input type="number" class="form-control" id="percentageOff"
         placeholder="Percentage Off" formControlName="percentageOff" />
@@ -10,7 +16,7 @@
 
     <div class="form-group">
       <label for="duration">Duration</label>
-      <select formControlName="duration">
+      <select formControlName="duration" [(ngModel)]="duration">
         <option>once</option>
         <option>repeating</option>
         <option>forever</option>
@@ -18,7 +24,7 @@
 
     </div>
 
-    <div class="form-group">
+    <div class="form-group" *ngIf="duration === 'repeating'">
       <label for="duration_in_months">Duration in Months</label>
       <input type="number" class="form-control" id="duration_in_months"
         placeholder="Duration in Months" formControlName="duration_in_months" />

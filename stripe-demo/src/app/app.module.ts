@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { CreateCouponComponent } from './components/create-coupon/create-coupon.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CouponsComponent } from './components/coupons/coupons.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import { CouponsComponent } from './components/coupons/coupons.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    //ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

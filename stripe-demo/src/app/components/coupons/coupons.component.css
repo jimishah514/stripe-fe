@@ -1,12 +1,19 @@
 .item {
-  background-color: aquamarine;
-  border: black;
-  border-style: solid;
+  /* background-color: aquamarine;
+  border-bottom: black;*/
   padding: 2%;
+  border-style: inset;
+
+}
+
+.item:hover {
+  background-color: aquamarine;
+  color: brown;
+  font-size: 20px;
 }
 
 .button {
-  color: red;
-  margin-left: 90%;
-  margin-bottom: 1%;
+
+  margin-top: 10px;
+
 }

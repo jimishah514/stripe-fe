@@ -19,7 +19,7 @@ export class ApiService {
   }
 
   postCoupons(percent_off, duration, duration_in_months ) {
-    try {
+    try {`1qaaaaaaaaaaaaaaa5e0-rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrp=[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]`
       return this.http.post(`${this.apiDomain}/coupons`, {percent_off, duration, duration_in_months}).toPromise();
     } catch {
       throw Error;

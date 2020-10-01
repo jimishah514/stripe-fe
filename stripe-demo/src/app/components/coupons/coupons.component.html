@@ -1,19 +1,21 @@
 <h1>Coupons List From Stripe</h1>
-<ul>
-  <li *ngFor="let coupon of state.coupons" class="item">
-    Coupon Id: {{coupon.id}}
-    <br>
-    Created: {{coupon.created}}
-    <br>
-    Duration: {{coupon.duration}}
-    <br>
-    Duration in months: {{coupon.duration_in_months}}
-    <br>
-    Percent Off: {{coupon.percent_off}}
-    <br>
-    Valid: {{coupon.valid}}
+<div class="container">
+  <ul>
+    <li *ngFor="let coupon of state.coupons" class="item">
+      Coupon Id: {{coupon.id}}
+      <br>
+      Created: {{coupon.created}}
+      <br>
+      Duration: {{coupon.duration}}
+      <br>
+      Duration in months: {{coupon.duration_in_months}}
+      <br>
+      Percent Off: {{coupon.percent_off}}
+      <br>
+      Valid: {{coupon.valid}}
+      <br>
+      <button class="btn btn-primary button" (click)="deleteCoupon(coupon.id)">delete</button>
+    </li>
+  </ul>
+</div>
 
-    <button class="button" (click)="deleteCoupon(coupon.id)">delete</button>
-  </li>
-
-</ul>

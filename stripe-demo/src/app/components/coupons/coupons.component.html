@@ -1,8 +1,18 @@
-<h1>Coupons List From Stripe</h1>
+
 <div class="container">
+  <h1>Coupons List From Stripe</h1>
+
+  <div class="d-flex justify-content-center" *ngIf="loading">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
   <ul>
     <li *ngFor="let coupon of state.coupons" class="item">
       Coupon Id: {{coupon.id}}
+      <br>
+      Name: {{coupon.name}}
       <br>
       Created: {{coupon.created}}
       <br>
@@ -14,7 +24,7 @@
       <br>
       Valid: {{coupon.valid}}
       <br>
-      <button class="btn btn-primary button" (click)="deleteCoupon(coupon.id)">delete</button>
+      <button class="btn btn-primary button " (click)="deleteCoupon(coupon.id)">delete</button>
     </li>
   </ul>
 </div>

@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  apiDomain = 'https://polar-shelf-99697.herokuapp.com';
-  //apiDomain = 'http://localhost:8080';
+  //apiDomain = 'https://polar-shelf-99697.herokuapp.com';
+  apiDomain = 'http://localhost:8080';
 
   helloWorld() {
     try {
@@ -18,9 +18,9 @@ export class ApiService {
     }
   }
 
-  postCoupons(percent_off, duration, duration_in_months ) {
-    try {`1qaaaaaaaaaaaaaaa5e0-rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrp=[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]`
-      return this.http.post(`${this.apiDomain}/coupons`, {percent_off, duration, duration_in_months}).toPromise();
+  postCoupons(name, percent_off, duration, duration_in_months ) {
+    try {
+      return this.http.post(`${this.apiDomain}/coupons`, {name, percent_off, duration, duration_in_months}).toPromise();
     } catch {
       throw Error;
     }

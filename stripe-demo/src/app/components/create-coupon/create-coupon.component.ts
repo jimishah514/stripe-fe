@@ -39,7 +39,7 @@ export class CreateCouponComponent implements OnInit {
     this.duration  = this.formGroup.value.duration;
     this.months = this.formGroup.value.duration_in_months;
     this.api.postCoupons(
-      this.percentage, this.duration, this.months
+      this.name, this.percentage, this.duration, this.months
       )
       .then(res => {
         this.state.getCoupons();
@@ -48,6 +48,10 @@ export class CreateCouponComponent implements OnInit {
       .catch(e => {
        // this.noty.showError("Create Coupon Failed","Create Coupon");
       });
+
+    console.log("Form Submitted!");
+    this.formGroup.reset();
+
   }
 
 

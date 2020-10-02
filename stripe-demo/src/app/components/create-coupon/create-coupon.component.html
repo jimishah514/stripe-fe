@@ -1,6 +1,6 @@
-<h1>Create Coupon Form</h1>
-<div class="container">
 
+<div class="container">
+  <h1>Create Coupon Form</h1>
   <form [formGroup]="formGroup">
     <div class="form-group">
       <label for="name">Name</label>
@@ -16,7 +16,7 @@
 
     <div class="form-group">
       <label for="duration">Duration</label>
-      <select formControlName="duration" [(ngModel)]="duration">
+      <select formControlName="duration" class="form-control" [(ngModel)]="duration">
         <option>once</option>
         <option>repeating</option>
         <option>forever</option>

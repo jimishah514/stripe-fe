@@ -7,12 +7,18 @@ import { CreateCouponComponent } from './components/create-coupon/create-coupon.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CouponsComponent } from './components/coupons/coupons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SignupComponent } from './components/signup/signup.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 //import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
     CreateCouponComponent,
-    CouponsComponent
+    CouponsComponent,
+    SignupComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

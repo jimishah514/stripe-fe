@@ -6,7 +6,10 @@ import { ApiService } from './api.service';
 })
 export class StateService {
   coupons;
-  constructor(private api: ApiService) { }
+  loggedIn;
+  constructor(private api: ApiService) {
+    this.loggedIn = false;
+  }
 
   getCoupons() {
     this.api.getCoupons()

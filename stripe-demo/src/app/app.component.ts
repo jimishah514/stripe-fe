@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './services/api.service';
+import { NotyService } from './services/noty.service';
 
 @Component({
   selector: 'app-root',

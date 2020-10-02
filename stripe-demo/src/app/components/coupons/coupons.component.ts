@@ -8,11 +8,12 @@ import { StateService } from 'src/app/services/state.service';
   styleUrls: ['./coupons.component.css']
 })
 export class CouponsComponent implements OnInit {
-
+  loading = true;
   constructor(private api: ApiService,public state: StateService) { }
 
   ngOnInit() {
     this.state.getCoupons();
+    this.loading = false;
   }
 
   deleteCoupon(id) {
